@@ -3,5 +3,5 @@ broker:
 bot:
     build: .
     links:
-        - broker
+        - broker:rabbitmq
     command: worker

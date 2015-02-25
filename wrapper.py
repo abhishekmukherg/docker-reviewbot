@@ -6,8 +6,8 @@ import os
 def get_broker():
     if 'BROKER' in os.environ:
         return os.environ['BROKER']
-    addr = 'BROKER_PORT_5672_TCP_ADDR' # 172.17.0.2
-    port = 'BROKER_PORT_5672_TCP_PORT' # 5672
+    addr = 'RABBITMQ_PORT_5672_TCP_ADDR' # 172.17.0.2
+    port = 'RABBITMQ_PORT_5672_TCP_PORT' # 5672
     vars_needed = (addr, port)
     for var in vars_needed:
         if var not in os.environ:
