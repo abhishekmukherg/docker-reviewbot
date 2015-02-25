@@ -23,11 +23,11 @@ docker-compose -d up
 
 ```bash
 $ docker run -d --name rabbitmq rabbitmq
-$ docker run --rm --link rabbitmq linkinpark342/docker-reviewbot
+$ docker run --rm --link rabbitmq linkinpark342/docker-reviewbot worker
 ```
 
 ### Specifying a Broker
 
 ```bash
-$ docker run --rm -e "BROKER_URL=amqp://guest:guest@localhost:5672//" linkinpark342/docker-reviewbot
+$ docker run --rm -e "BROKER_URL=amqp://guest:guest@localhost:5672//" linkinpark342/docker-reviewbot worker
 ```
