@@ -4,5 +4,4 @@ bot:
     build: .
     links:
         - broker
-    command:
-        bash -c  "echo $BROKER_PORT"
+    command: worker
