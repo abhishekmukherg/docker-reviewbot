@@ -1,0 +1,8 @@
+broker:
+    image: rabbitmq:3
+bot:
+    build: .
+    links:
+        - broker
+    command:
+        bash -c  "echo $BROKER_PORT"
